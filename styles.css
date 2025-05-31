@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+#contact,#projects,#about {
+    position: relative;
+    top:0%;
+}
+
+:root{
+    --dom-color: #1C1A27;
+    --contrast-color: #fafa70;
+    --accent-color: rgba(255, 255, 255);
+    --navBar-Height: 4vh;
+    --navAndSideBar-color: rgba(0, 0, 0, 91%);
+}
+
+.nav-container {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: var(--navBar-Height);
+    background-color: var(--navAndSideBar-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+nav {
+    position: relative;
+    width: 84%;
+    height: var(--navBar-Height);
+    display: flex;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+
+nav a{
+    text-decoration: none;
+    color: var(--accent-color);
+    font-family: sans-serif;
+    font-size: 16px;
+
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.icon_img{
+    height: 24px;
+    width: auto;   
+}
+
+.social_icons{
+ margin-left: -1.5rem;
+}
+
+.page_nav{ 
+ margin-right: calc( 25% - ( 298.75px / 2 ) );
+ margin-left: auto;
+}
+
+
+.invis{
+    opacity: 0;
+}
+
+/*screen sections*/
+body { 
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.page-content {
+    position: relative;
+    margin-top: var(--navBar-Height); /* Adjust this value based on the height of your fixed nav */
+}
+
+.about-section {   
+    position: sticky;
+    top: var(--navBar-Height);
+    width: 100%;
+    height: 60vh;
+    background-color: var(--dom-color);
+    z-index: 997;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    margin-left: 8%;
+    align-items: center;
+}
+
+.about-profile_img_container{
+    width: 50%;
+    height: 100%;    
+    margin-right: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-profile_img{
+    width: 50%;   /* o % */
+    height: auto;   /* mantiene il rapporto originale */
+    
+    display: flex;
+    
+    object-fit: cover;     /* Taglia l’immagine per riempire perfettamente */
+    border-radius: 50%;    /* Questo crea il cerchio */
+}
+
+.project-section {
+    position: sticky;
+    top: var(--navBar-Height);
+    width: 100%;
+    height: 100vh;
+    background-color: var(--contrast-color); 
+    z-index: 998;
+}
+
+.project-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.project-cards-container {
+    width: 100%;
+    height: 40%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+}
+
+.project-card {
+    width: 20%;
+    height: 100%;
+    background-color: var(--navAndSideBar-color);
+}
+
+.contact-section {
+    position: sticky;
+    top: var(--navBar-Height);
+    width: 100%;
+    height: calc(100vh - var(--navBar-Height));
+    background-color: var(--dom-color) ;
+    z-index: 999;
+}
+
+/*nav bar hover effect*/
+ul:hover a:hover{
+    opacity:1;
+}
+
+ul:hover a{
+    opacity: 0.3;
+}
+
+/*text formatting*/
+.about-content h1 {    
+    color: var(--contrast-color);
+    font-size: clamp(1rem, 7vh, 4rem);
+    margin: 0;
+    font-family: 'Heretica', sans-serif;
+}
+
+.project-content h1 {
+    color: var(--dom-color);
+    font-size: clamp(0.6rem, 6vh , 4rem);
+    margin: 0;
+    font-family: 'Heretica', sans-serif;
+
+}
+
+/* scroll bar styling For WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px; /* Set the width of the scrollbar */
+}
+  
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 91%); /* Set the color of the track (the non-draggable part) */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color); /* Set the default color of the thumb */
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba( 255,255,255, 0.7);
+}
+
