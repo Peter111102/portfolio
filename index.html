@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="styles.css?v=2">
+        <link rel="stylesheet" href="styles.css?v=3">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>My Portfolio</title>
     </head>
     <body>
-      <main>
-        <header class="nav-container">
-            <nav>
-                <ul class="social_icons">
-                    <li><a href="cv_url" target="_blank" rel="noopener noreferrer"><img class="icon_img"  src="assets/icons/cv.png" alt="icona cv" ></a></li>
-                    <li><a href="https://github.com/Peter111102" target="_blank" rel="noopener noreferrer" ><img class="icon_img"  src="assets/icons/github.png" alt="icona github" ></a></li>
-                    <li><a href="https://www.linkedin.com/in/pietro-rocco111102" target="_blank" rel="noopener noreferrer"><img class="icon_img"  src="assets/icons/linkedin.png" alt="icona linkedin"></a></li>
+      <main aria-label="Main content">
+        <header class="nav-container" role="banner">
+            <nav aria-label="Primary navigation">
+                <ul class="social_icons" aria-label="Social links">
+                    <li><a href="cv_url" target="_blank" rel="noopener noreferrer" aria-label="Download CV"><img class="icon_img"  src="assets/icons/cv.png" alt="CV icon" ></a></li>
+                    <li><a href="https://github.com/Peter111102" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><img class="icon_img"  src="assets/icons/github.png" alt="GitHub icon" ></a></li>
+                    <li><a href="https://www.linkedin.com/in/pietro-rocco111102" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><img class="icon_img"  src="assets/icons/linkedin.png" alt="LinkedIn icon"></a></li>
                 </ul>
-                <ul class="page_nav">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects" >Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul class="page_nav" aria-label="Page navigation">
+                    <li><a href="#about" aria-label="About section">About</a></li>
+                    <li><a href="#projects" aria-label="Projects section">Projects</a></li>
+                    <li><a href="#contact" aria-label="Contact section">Contact</a></li>
                 </ul>
             </nav>
         </header>
         <div class="page-content">
-            <div id="about"></div> 
-            <div class="about-section">  
+            <div id="about" tabindex="-1"></div> 
+            <div class="about-section" aria-labelledby="about-heading">  
                 <div class="about-content">
-                    <h1>Pietro Rocco is a web <br> developer working with <br> businesses to create <br> an online presence.</h1>
+                    <h1 id="about-heading">Pietro Rocco is a web <br> developer working with <br> businesses to create <br> an online presence.</h1>
                 </div>
                 <div class="about-profile_img_container">
-                    <img class="about-profile_img"  src="assets/foto profilo.jpg" alt="foto profilo">
+                    <img class="about-profile_img"  src="assets/foto profilo.jpg" alt="Profile photo of Pietro Rocco">
                 </div>
             </div>
-            <div id="projects"></div>
-            <div class="project-section"> 
+            <div id="projects" tabindex="-1"></div>
+            <div class="project-section" aria-labelledby="projects-heading"> 
                 <div class="project-content" >
-                    <h1>Recent projects</h1>
+                    <h1 id="projects-heading">Recent projects</h1>
                 </div>
                 <div class="project-cards-container">
                     <div class="project-card">
-                        <a href="https://github.com/Peter111102/news-app" target="_blank" rel="noopener noreferrer"><img  class="project-card-app-img" src="assets/news_app_img.png" alt="news app repository" ></a>
+                        <a href="https://github.com/Peter111102/news-app" target="_blank" rel="noopener noreferrer" aria-label="News App GitHub repository"><img  class="project-card-app-img" src="assets/news_app_img.png" alt="News app repository screenshot" ></a>
                     </div>
                     <div class="project-card"></div>
                     <div class="project-card"></div>
@@ -47,9 +47,10 @@
                     <div class="project-card"></div>
                 </div>
             </div>
-            <div id="contact"></div>
-            <div class="contact-section">
-               
+            <div id="contact" tabindex="-1"></div>
+            <div class="contact-section" aria-labelledby="contact-heading">
+               <!-- Add a heading for accessibility -->
+               <h2 id="contact-heading" class="visually-hidden">Contact</h2>
             </div>
         </div>
       </main>
