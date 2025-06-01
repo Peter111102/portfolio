@@ -142,17 +142,21 @@ body {
     margin: 0 8%;
     border: 2px solid var(--navAndSideBar-color);
     border-radius: 1rem;
+    background-color: var(--dom-color);
 }
 
-.project-card-app-img {
-    width: 23%;
-    height: auto;
-    border-radius: 2%;
-    margin: auto 1%;
-    border: 2px solid #fff;
+.project-card{
+    height: 100%;
+}
+
+.project-card-app-img { 
+    width: auto;
+    height: 100%;
+   
 }
 
 .project-card-app-site-img {
+   
     width: 40%;
     height: auto;
 }
