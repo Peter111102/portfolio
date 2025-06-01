@@ -1,27 +1,28 @@
-*{
+/* Universal box-sizing and smooth scroll */
+* {
     box-sizing: border-box;
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-   
+    font-family: 'Heretica', sans-serif;
 }
 
-#contact,#projects,#about {
-    position: relative;
-    top:0%;
-}
-
-:root{
+:root {
     --dom-color: #1C1A27;
     --contrast-color: #F6E27F;
-    --accent-color: rgba(255, 255, 255);
+    --accent-color: #fff;
     --navBar-Height: 4vh;
-    --navAndSideBar-color: rgba(0, 0, 0, 91%);
+    --navAndSideBar-color: rgba(0, 0, 0, 0.91);
+}
+
+#contact, #projects, #about {
+    position: relative;
+    top: 0%;
 }
 
 .nav-container {
     position: fixed;
-    top: 0%;
+    top: 0;
     width: 100%;
     height: var(--navBar-Height);
     background-color: var(--navAndSideBar-color);
@@ -39,55 +40,48 @@ nav {
     align-items: center;
 }
 
-nav ul{
+nav ul {
     display: flex;
     list-style: none;
     align-items: center;
 }
 
-
-nav a{
+nav a {
     text-decoration: none;
     color: var(--accent-color);
-    font-family: sans-serif;
     font-size: 16px;
-
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding: 0 1.5rem;
 }
 
-.icon_img{
+.icon_img {
     height: 24px;
-    width: auto;   
+    width: auto;
 }
 
-.social_icons{
- margin-left: -1.5rem;
+.social_icons {
+    margin-left: -1.5rem;
 }
 
-.page_nav{ 
- margin-right: calc( 25% - ( 298.75px / 2 ) );
- margin-left: auto;
+.page_nav {
+    margin-right: calc(25% - 149.375px);
+    margin-left: auto;
 }
 
-
-.invis{
+.invis {
     opacity: 0;
 }
 
-/*screen sections*/
-body { 
+body {
     width: 100%;
     height: 100%;
-    margin: 0;
 }
 
 .page-content {
     position: relative;
-    margin-top: var(--navBar-Height); /* Adjust this value based on the height of your fixed nav */
+    margin-top: var(--navBar-Height);
 }
 
-.about-section {   
+.about-section {
     position: sticky;
     top: var(--navBar-Height);
     width: 100%;
@@ -98,7 +92,7 @@ body {
     flex-direction: row;
 }
 
-.about-content{
+.about-content {
     width: 50%;
     height: 100%;
     display: flex;
@@ -106,20 +100,21 @@ body {
     align-items: center;
 }
 
-.about-profile_img_container{
+.about-profile_img_container {
     width: 50%;
-    height: 100%;    
+    height: 100%;
     margin-right: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.about-profile_img{
-    width: 65%;   /* o % */
-    height: auto;   /* mantiene il rapporto originale */
+
+.about-profile_img {
+    width: 65%;
+    height: auto;
     display: flex;
-    object-fit: cover;     /* Taglia l’immagine per riempire perfettamente */
-    border-radius: 50%;    /* Questo crea il cerchio */
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .project-section {
@@ -127,7 +122,7 @@ body {
     top: var(--navBar-Height);
     width: 100%;
     height: 100vh;
-    background-color: var(--contrast-color); 
+    background-color: var(--contrast-color);
     z-index: 998;
 }
 
@@ -140,30 +135,24 @@ body {
 
 .project-cards-container {
     width: 84%;
-    height: 60%; 
+    height: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 8%;
-    margin-left: 8%;
-   /* background-color: var(--navAndSideBar-color);*/
-   border: 2px solid var(--navAndSideBar-color);
-   border-radius: 1rem;
+    margin: 0 8%;
+    border: 2px solid var(--navAndSideBar-color);
+    border-radius: 1rem;
 }
 
-.project-card {
-    
-}
-
-.project-card-app-img{
+.project-card-app-img {
     width: 23%;
     height: auto;
-    border-radius: 2%; 
-    margin: 1% 1%;
-    border: 2px solid white;
+    border-radius: 2%;
+    margin: auto 1%;
+    border: 2px solid #fff;
 }
 
-.project-card-app-site-img{
+.project-card-app-site-img {
     width: 40%;
     height: auto;
 }
@@ -173,50 +162,47 @@ body {
     top: var(--navBar-Height);
     width: 100%;
     height: calc(100vh - var(--navBar-Height));
-    background-color: var(--dom-color) ;
+    background-color: var(--dom-color);
     z-index: 999;
 }
 
-/*nav bar hover effect*/
-ul:hover a:hover{
-    opacity:1;
+/* Nav bar hover effect */
+ul:hover a:hover {
+    opacity: 1;
 }
 
-ul:hover a{
+ul:hover a {
     opacity: 0.3;
 }
 
-/*text formatting*/
-.about-content h1 {    
+/* Text formatting */
+.about-content h1 {
     color: var(--contrast-color);
     font-size: clamp(1rem, 7vh, 4rem);
     margin: 0;
-    font-family: 'Heretica', sans-serif;
 }
 
 .project-content h1 {
-    color: black;
-    font-size: clamp(0.6rem, 6vh , 4rem);
+    color: #000;
+    font-size: clamp(0.6rem, 6vh, 4rem);
     margin: 0;
-    font-family: 'Heretica', sans-serif;
-
 }
 
-/* scroll bar styling For WebKit (Chrome, Safari) */
+/* Scrollbar styling for WebKit browsers */
 ::-webkit-scrollbar {
-    width: 6px; /* Set the width of the scrollbar */
+    width: 6px;
 }
-  
+
 ::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 91%); /* Set the color of the track (the non-draggable part) */
+    background-color: var(--navAndSideBar-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--accent-color); /* Set the default color of the thumb */
-    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+    background-color: var(--accent-color);
+    transition: background-color 0.3s ease;
 }
-  
+
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba( 255,255,255, 0.7);
+    background-color: rgba(255,255,255,0.7);
 }
 
