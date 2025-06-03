@@ -210,3 +210,71 @@ ul:hover a {
     background-color: rgba(255,255,255,0.7);
 }
 
+/* Responsive scaling for tablets and mobile */
+@media (max-width: 900px) {
+  .about-section, .project-section {
+    flex-direction: column-reverse;
+    height: auto;
+    min-height: 60vh;
+  }
+  .about-content, .about-profile_img_container {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-profile_img {
+    width: 40vw;
+    max-width: 200px;
+  }
+  .project-cards-container {
+    flex-direction: column;
+    width: 96%;
+    height: auto;
+    margin: 0 2%;
+    padding: 1rem 0;
+  }
+  .project-card {
+    width: 90vw;
+    max-width: 400px;
+    margin: 1rem 0;
+    height: auto;
+  }
+  .project-card-app-img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+  }
+  nav {
+    width: 100%;
+  }
+  .page_nav {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-content h1, .project-content h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .nav-container {
+    height: auto;
+    flex-direction: row;
+    padding: 0.5rem 0;
+  }
+  nav ul {
+    flex-direction: row;
+    padding: 0;
+  }
+  nav a {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
+  .about-section, .project-section, .contact-section {
+    padding: 1rem 0.5rem;
+    min-height: unset;
+    height: auto;
+  }
+}
+
