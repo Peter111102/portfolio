@@ -12,7 +12,7 @@
     --contrast-color: #F6E27F;
     --accent-color: #fff;
     --navBar-Height: 5vh;
-    --navAndSideBar-color: rgba(0, 0, 0, 0.91);
+    --navAndSideBar-color: rgba(0, 0, 0, 0.7);
 }
 
 html {
@@ -99,6 +99,7 @@ html, body {
 .page-content {
     position: relative;
     padding-top: var(--navBar-Height);
+    
 }
 
 .about-section {
